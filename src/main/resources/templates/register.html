@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Register</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    </head>
+    <body>
+        <form th:object="${userRegister}" method="post">
+            <fieldset>
+                <label>Simple Register System</label> <br/>
+                <input th:field="*{username}" name="username" type="text" placeholder="Username" autofocus required /> <br/>
+                <input th:field="*{password}" name="password" type="password" placeholder="Password" required /> <br/>
+                <input th:field="*{matchingPassword}" name="matchingPassword" type="password" placeholder="Confirm Password" required /> <br/>
+                <input type="submit" id="input_submit_signup"  value="Register"/>
+            </fieldset>
+        </form>
+    </body>
+</html>
